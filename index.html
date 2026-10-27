@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MicroBlog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="auth">
+<h1>MicroBlog</h1>
+    <div id="login">
+      <input id="lu" placeholder="Username">
+      <input id="lp"
+             type="password"
+             placeholder="Password">
+      <button onclick="signin()">Login</button>
+      <p>
+        New user?
+        <a href="#" onclick="showRegister()">Register</a>
+      </p>
+    </div>
+    <!-- Register -->
+    <div id="register" class="hide">
+      <input id="rn" placeholder="Name">
+      <input id="ru" placeholder="Username">
+      <input id="rp"
+             type="password"
+             placeholder="Password">
+      <button onclick="signup()">Register</button>
+      <p>
+        Already registered?
+        <a href="#" onclick="showLogin()">Login</a>
+      </p>
+    </div>
+  </div>
+  <!-- Main App -->
+  <div id="app" class="hide">
+    <nav>
+      <b>MicroBlog</b>
+      <button onclick="home()">Home</button>
+      <button onclick="showUsers()">Users</button>
+      <button onclick="showProfile()">Profile</button>
+      <button onclick="logout()">Logout</button>
+    </nav>
+    <main id="page"></main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
